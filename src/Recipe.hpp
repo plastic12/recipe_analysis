@@ -1,4 +1,4 @@
-#ifndef RECEPE_H
+#ifndef RECIPE_H
 #define RECIPE_H
 
 #include <string>
