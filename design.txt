@@ -1,0 +1,26 @@
+design of the program:
+the user can choose the file in program default location
+or create new file
+or delete file
+program
+have a list of recipe
+user can 
+ create machine
+ create primitive
+ set/unset primitive
+ insert recipe
+ rename recipe
+ delete recipe(only from top layer)
+ recipe analysis
+ save and exit
+recipe have
+output:String
+quantity:double
+isPrimitive:bool
+time:double
+machine:machine
+input:item pair[]
+function
+analysis
+
+
