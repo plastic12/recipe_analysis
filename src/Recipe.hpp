@@ -1,3 +1,6 @@
+#ifndef RECEPE_H
+#define RECIPE_H
+
 #include <string>
 #include <iostream>
 
@@ -18,3 +21,6 @@ class Recipe
 
 
 };
+
+
+#endif
