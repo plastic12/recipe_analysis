@@ -8,6 +8,11 @@ Recipe::Recipe(std::string output,double quantity,bool isPrimitive,double time)
 	this->isPrimitive=isPrimitive;
 	this->time=time;
 }
+//deserialize
+Recipe::Recipe(std::string input)
+{
+	
+}
 std::string Recipe::serialize()
 {
 	std::string out;

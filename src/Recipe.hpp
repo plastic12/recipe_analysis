@@ -15,6 +15,7 @@ class Recipe
 
 	public:
 		Recipe(std::string,double,bool,double);
+		Recipe(std::string);
 		std::string serialize();
 
 

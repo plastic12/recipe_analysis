@@ -1,6 +1,14 @@
-all:main
+file	:=
+ifeq ($(OS),Windows_NT)
+	file=main.exe
+else
+	file=main
+endif
 
-main:Recipe.o ../src/main.cpp Scanner.o
+
+all:$(file)
+
+$(file):Recipe.o ../src/main.cpp Scanner.o
 	g++ -o main ../src/main.cpp Recipe.o Scanner.o
 Recipe.o:../src/Recipe.cpp ../src/Recipe.hpp
 	g++ -c ../src/Recipe.cpp
