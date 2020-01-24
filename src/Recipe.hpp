@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+#include "Scanner.hpp"
 
 
 class Recipe

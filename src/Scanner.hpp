@@ -8,9 +8,20 @@
 
 class Scanner
 {
-	std::string in;
-	char delimiter;
-	Scanner(std::string,char deli=' ');
+	private:
+		std::string in;
+		int index;
+		std::string delimiter;
+		int index2;
+		void repos();
+	public:
+		Scanner(std::string,char deli=' ');
+		bool hasNext();
+		std::string next();
+		bool hasNextDouble();
+		double nextDouble();
+		bool hasNextBoolean();
+		bool nextBoolean();
 
 
 };

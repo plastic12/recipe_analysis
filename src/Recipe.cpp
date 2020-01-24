@@ -11,7 +11,12 @@ Recipe::Recipe(std::string output,double quantity,bool isPrimitive,double time)
 //deserialize
 Recipe::Recipe(std::string input)
 {
-	
+	Scanner sc(input,',');
+	output=sc.next();
+	quantity=sc.nextDouble();
+	isPrimitive=sc.nextBoolean();
+	time=sc.nextDouble();
+
 }
 std::string Recipe::serialize()
 {
