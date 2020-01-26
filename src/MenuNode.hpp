@@ -4,17 +4,17 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "MenuOption.hpp"
 
-class MenuOption;
 
 class MenuNode
 {
-    private:
-    std::string prompt;
+	std::string prompt;
     std::vector<MenuOption> options;
+    
     public:
     MenuNode();
-    addOption(MenuOption);
+    void addOption(MenuOption);
     int readInt();
     void setPrompt(std::string);
     static MenuNode* runMenu(MenuNode*);

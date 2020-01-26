@@ -5,7 +5,7 @@ else
 	file=main
 endif
 
-obj=Scanner.o MenuNode.o MenuOption.o
+obj=Scanner.o Recipe.o MenuNode.o MenuOption.o
 
 
 

@@ -21,7 +21,7 @@ std::string MenuOption::getOption()
 	return option;
 }
 bool MenuOption::getEnable(){return enable;}
-MenuNode* run()
+MenuNode* MenuOption::run()
 {
     command();
     return node;

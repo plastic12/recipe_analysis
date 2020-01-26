@@ -1,11 +1,8 @@
-#ifdef MENUOPTION_H
+#ifndef MENUOPTION_H
 #define MENUOPTION_H
-
-
 
 #include <string>
 #include <functional>
-#include "MenuNode.hpp"
 
 
 class MenuNode;
@@ -23,8 +20,8 @@ class MenuOption
     std::string getOption();
 	bool getEnable();
     MenuNode* run();
+    
 };
-
 
 
 #endif
