@@ -15,9 +15,13 @@ int MenuNode::readInt()
 	std::cout<<"Choose your option"<<std::endl;
 	int output;
     std::cin>>output;
-	if(output<1||output>=options.size())
+	if(output<1||output>options.size())
 	{
 		std::cout<<"Invalid input"<<std::endl;
+
+		//std::cout<<"your input:"<<output<<std::endl;
+
+
 		output=-1;
 	}
 	else if(!options[output-1].getEnable())

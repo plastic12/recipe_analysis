@@ -2,14 +2,7 @@
 #include "MenuNode.hpp"
 
 
-MenuOption::MenuOption(MenuNode* node,std::string option,std::function<void()> command)
-{
-	this->node=node;
-	this->option=option;
-	this->command=command;
-	this->enable=true;
-}
-MenuOption::MenuOption(MenuNode* node,std::string option,std::function<void()> command,bool)
+MenuOption::MenuOption(std::string option,std::function<void()> command,MenuNode* node,bool enable)
 {
 	this->node=node;
 	this->option=option;
