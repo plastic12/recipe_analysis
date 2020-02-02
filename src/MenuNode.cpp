@@ -1,5 +1,4 @@
 #include "MenuNode.hpp"
-#include "MenuOption.hpp"
 
 
 MenuNode::MenuNode()
@@ -7,7 +6,7 @@ MenuNode::MenuNode()
     prompt="";
 	options=std::vector<MenuOption>();
 }
-MenuNode::addOption(MenuOption option)
+void MenuNode::addOption(MenuOption option)
 {
     options.push_back(option);
 }
@@ -16,9 +15,13 @@ int MenuNode::readInt()
 	std::cout<<"Choose your option"<<std::endl;
 	int output;
     std::cin>>output;
-	if(output<1||output>=options.size())
+	if(output<1||output>options.size())
 	{
 		std::cout<<"Invalid input"<<std::endl;
+
+		//std::cout<<"your input:"<<output<<std::endl;
+
+
 		output=-1;
 	}
 	else if(!options[output-1].getEnable())
@@ -28,7 +31,7 @@ int MenuNode::readInt()
 	}
 	return output;
 }
-MenuNode::setPrompt(std::string prompt)
+void MenuNode::setPrompt(std::string prompt)
 {
     this->prompt=prompt;
 }
@@ -40,7 +43,7 @@ MenuNode* MenuNode::runMenu(MenuNode* node)
 		std::cout<<node->prompt<<std::endl;
 		for(int i=0;i<node->options.size();i++)
 		{
-			std::cout<<std::to_string(i+1)+". "+node->options.get(i).getOption()+(node->options[i].getEnable() ? "": "(disable)"))<<std::endl;
+			std::cout<<std::to_string(i+1)+". "+node->options[i].getOption()+(node->options[i].getEnable() ? "": "(disable)")<<std::endl;
 		}
 		input=node->readInt();
 	}
@@ -54,6 +57,5 @@ void MenuNode::startMenu(MenuNode* node)
 		current=runMenu(current);
     }
 }
-
 
 
