@@ -7,6 +7,8 @@
 #include "MenuOption.hpp"
 
 
+class MenuOption;
+
 class MenuNode
 {
 	std::string prompt;
